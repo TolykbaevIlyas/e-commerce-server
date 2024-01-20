@@ -6,13 +6,13 @@ import {TypeOrmModule as NestTypeOrmModule} from "@nestjs/typeorm"
         NestTypeOrmModule.forRoot({
             type: 'postgres',
             host: process.env.POSTGRES_HOST,
-            port: Number(process.env.POSTGRES_PORT),
-            username: process.env.POSTGRES_USERNAME,
-            password: process.env.POSTGRES_PASSWORD,
-            database: process.env.POSTGRES_DATABASE,
+            port: 5433,
+            username: "nest_test",
+            password: "nest_test",
+            database: "nest_test",
             entities: ['dist/entities/**/*.entity.js'],
-            migrations: ['dist/db/migrations/**/*.js'],
             synchronize: true,
+            // migrations: ['dist/db/migrations/**/*.js'],
             // cli: {migrationsDir: 'src/db/migrations'},
         })
     ]
