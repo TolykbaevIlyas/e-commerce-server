@@ -7,11 +7,11 @@ services:
     environment:
       POSTGRES_USER: nest_test
       POSTGRES_PASSWORD: nest_test
-      PGDATA: /data/POSTGRES_PASSWORD
+      PGDATA: /data/postgres
     volumes:
       - postgres:/var/www/nest_test/docker-volumes/postgres
     ports:
-      - 127.0.0.1:5432:5432
+      - 127.0.0.1:5433:5432
     networks:
       - nest_test
     restart: unless-stopped
@@ -37,4 +37,4 @@ networks:
 
 volumes:
   postgres:
-  pgdmin:
+  pgadmin:
